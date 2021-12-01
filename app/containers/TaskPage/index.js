@@ -7,46 +7,68 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { FormattedMessage } from 'react-intl';
 import { createStructuredSelector } from 'reselect';
 import { compose, bindActionCreators } from 'redux';
 
 import { useInjectSaga } from 'utils/injectSaga';
 import { useInjectReducer } from 'utils/injectReducer';
+import AuthPageActions from 'containers/AuthPage/actions';
 import makeSelectTaskPage from './selectors';
 import Actions from './actions';
 import reducer from './reducer';
 import saga from './saga';
-import messages from './messages';
+import makeSelectAuthPage from '../AuthPage/selectors';
+import Header from './Header';
+import TaskList from './TaskList';
 
 export function TaskPage(props) {
   useInjectReducer({ key: 'taskPage', reducer });
   useInjectSaga({ key: 'taskPage', saga });
 
-  const { getTasks, taskPageState } = props;
-  const { tasks } = taskPageState;
+  const {
+    getUser,
+    authPageState,
+    history,
+    toggleSignedIn,
+    taskPageState,
+    getActiveTasks,
+    createTask,
+    deleteTask,
+  } = props;
+  const { tasks, taskState } = taskPageState;
 
   useEffect(() => {
-    getTaskPage();
-  }, []);
+    getActiveTasks();
+    getUser();
+  }, [taskState]);
 
   return (
     <div>
-      <FormattedMessage {...messages.header} />
-      {tasks.map(a => (
-        <div key={a.id}>{a.title}</div>
-      ))}
+      <Header
+        authPageState={authPageState}
+        history={history}
+        toggleSignedIn={toggleSignedIn}
+        createTask={createTask}
+      />
+      <TaskList tasks={tasks} deleteTask={deleteTask} />
     </div>
   );
 }
 
 TaskPage.propTypes = {
-  getTasks: PropTypes.object,
+  createTask: PropTypes.object,
+  getActiveTasks: PropTypes.object,
+  deleteTask: PropTypes.object,
   taskPageState: PropTypes.object,
+  getUser: PropTypes.object,
+  authPageState: PropTypes.object,
+  history: PropTypes.any,
+  toggleSignedIn: PropTypes.object,
 };
 
 const mapStateToProps = createStructuredSelector({
   taskPageState: makeSelectTaskPage(),
+  authPageState: makeSelectAuthPage(),
 });
 
 function mapDispatchToProps(dispatch) {
@@ -54,6 +76,7 @@ function mapDispatchToProps(dispatch) {
     ...bindActionCreators(
       {
         ...Actions.Creators,
+        ...AuthPageActions.Creators,
       },
       dispatch,
     ),

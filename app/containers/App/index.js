@@ -15,8 +15,9 @@ import { Switch, Route } from 'react-router-dom';
 import FeaturePage from 'containers/FeaturePage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
 import TaskPage from 'containers/TaskPage';
-import Header from 'components/Header';
-import Footer from 'components/Footer';
+import AuthPage from 'containers/AuthPage';
+// import Header from 'components/Header';
+// import Footer from 'components/Footer';
 
 import GlobalStyle from '../../global-styles';
 
@@ -38,13 +39,14 @@ export default function App() {
       >
         <meta name="description" content="A React.js Boilerplate application" />
       </Helmet>
-      <Header />
+      {/* <Header /> */}
       <Switch>
         <Route exact path="/" component={TaskPage} />
+        <Route exact path="/auth" component={AuthPage} />
         <Route path="/features" component={FeaturePage} />
         <Route path="" component={NotFoundPage} />
       </Switch>
-      <Footer />
+      {/* <Footer /> */}
       <GlobalStyle />
     </AppWrapper>
   );

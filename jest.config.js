@@ -26,6 +26,6 @@ module.exports = {
     'react-testing-library/cleanup-after-each',
   ],
   setupFiles: ['raf/polyfill'],
-  testRegex: 'tests/.*\\.test\\.js$',
+  testMatch: ['**/containers/AuthPage/tests/*.js?(x)'],
   snapshotSerializers: [],
 };

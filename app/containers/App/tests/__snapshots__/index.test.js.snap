@@ -13,12 +13,32 @@ exports[`<App /> should render and match the snapshot 1`] = `
       name="description"
     />
   </HelmetWrapper>
-  <Header />
   <Switch>
     <Route
-      component={[Function]}
+      component={
+        Object {
+          "$$typeof": Symbol(react.memo),
+          "WrappedComponent": [Function],
+          "compare": null,
+          "displayName": "Connect(TaskPage)",
+          "type": [Function],
+        }
+      }
       exact={true}
       path="/"
+    />
+    <Route
+      component={
+        Object {
+          "$$typeof": Symbol(react.memo),
+          "WrappedComponent": [Function],
+          "compare": null,
+          "displayName": "Connect(AuthPage)",
+          "type": [Function],
+        }
+      }
+      exact={true}
+      path="/auth"
     />
     <Route
       component={[Function]}
@@ -29,7 +49,6 @@ exports[`<App /> should render and match the snapshot 1`] = `
       path=""
     />
   </Switch>
-  <Footer />
   <GlobalStyleComponent />
 </ForwardRef>
 `;

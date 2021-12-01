@@ -1,0 +1,194 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AuthPage /> Should render and match the snapshot 1`] = `
+<div>
+  <div
+    className="MuiBox-root MuiBox-root-1"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-container MuiGrid-align-items-xs-center MuiGrid-justify-content-xs-center"
+    >
+      <div
+        className="styles__Container-t4qiyr-0 hKNyRe"
+      >
+        <div
+          className="MuiPaper-root MuiCard-root login-card MuiPaper-elevation1 MuiPaper-rounded"
+        >
+          <form
+            className="form"
+            onSubmit={[Function]}
+          >
+            <h2
+              className="title"
+            >
+              Login 
+            </h2>
+            <div
+              className="input-groups pb-3 mt-3"
+            >
+              <div
+                className="MuiFormControl-root MuiTextField-root pb-3 MuiFormControl-fullWidth"
+                style={
+                  Object {
+                    "paddingBottom": "1rem",
+                  }
+                }
+              >
+                <label
+                  className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+                  data-shrink={false}
+                  htmlFor="standard-basic-email"
+                  id="standard-basic-email-label"
+                >
+                  Email address
+                </label>
+                <div
+                  className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
+                  onClick={[Function]}
+                >
+                  <input
+                    aria-invalid={false}
+                    autoFocus={false}
+                    className="MuiInputBase-input MuiInput-input"
+                    disabled={false}
+                    id="standard-basic-email"
+                    onAnimationStart={[Function]}
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    required={false}
+                    type="text"
+                    value=""
+                  />
+                </div>
+              </div>
+              <div
+                className="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"
+                style={
+                  Object {
+                    "paddingBottom": "1rem",
+                  }
+                }
+              >
+                <label
+                  className="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated"
+                  data-shrink={false}
+                  htmlFor="standard-basic-password"
+                  id="standard-basic-password-label"
+                >
+                  Password
+                </label>
+                <div
+                  className="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
+                  onClick={[Function]}
+                >
+                  <input
+                    aria-invalid={false}
+                    autoFocus={false}
+                    className="MuiInputBase-input MuiInput-input"
+                    disabled={false}
+                    id="standard-basic-password"
+                    onAnimationStart={[Function]}
+                    onBlur={[Function]}
+                    onChange={[Function]}
+                    onFocus={[Function]}
+                    required={false}
+                    type="password"
+                    value=""
+                  />
+                </div>
+              </div>
+              <button
+                className="MuiButtonBase-root MuiButton-root MuiButton-text"
+                disabled={false}
+                onBlur={[Function]}
+                onDragLeave={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                style={
+                  Object {
+                    "marginBottom": "1rem",
+                  }
+                }
+                tabIndex={0}
+                type="button"
+              >
+                <span
+                  className="MuiButton-label"
+                >
+                  Forgot password?
+                </span>
+              </button>
+              <button
+                className="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary"
+                disabled={false}
+                onBlur={[Function]}
+                onDragLeave={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                style={
+                  Object {
+                    "marginBottom": "1rem",
+                    "width": "100%",
+                  }
+                }
+                tabIndex={0}
+                type="submit"
+              >
+                <span
+                  className="MuiButton-label"
+                >
+                  Login
+                </span>
+              </button>
+              <button
+                className="MuiButtonBase-root MuiButton-root MuiButton-text not-yet-registered"
+                disabled={false}
+                onBlur={[Function]}
+                onClick={[Function]}
+                onDragLeave={[Function]}
+                onFocus={[Function]}
+                onKeyDown={[Function]}
+                onKeyUp={[Function]}
+                onMouseDown={[Function]}
+                onMouseLeave={[Function]}
+                onMouseUp={[Function]}
+                onTouchEnd={[Function]}
+                onTouchMove={[Function]}
+                onTouchStart={[Function]}
+                style={
+                  Object {
+                    "marginBottom": "1rem",
+                  }
+                }
+                tabIndex={0}
+                type="button"
+              >
+                <span
+                  className="MuiButton-label"
+                >
+                  Not yet registered?
+                </span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

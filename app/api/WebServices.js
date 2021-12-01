@@ -6,7 +6,7 @@ const WebServices = (options = API.SERVER.WEBSERVICES.OPTIONS) => {
 
   const mapping = {
     login: {
-      path: '/login/token',
+      path: '/auth/login',
       method: 'post',
       cache: null,
     },
@@ -15,10 +15,25 @@ const WebServices = (options = API.SERVER.WEBSERVICES.OPTIONS) => {
       method: 'post',
       cache: null,
     },
+    getUser: {
+      path: '/auth/user',
+      method: 'getNoParam',
+    },
     getTasks: {
-      path: '/todos',
-      method: 'getAll',
-      cache: null,
+      path: '/tasks',
+      method: 'getNoParam',
+    },
+    getActiveTasks: {
+      path: '/tasks/active',
+      method: 'getNoParam',
+    },
+    createTask: {
+      path: '/tasks',
+      method: 'post',
+    },
+    deleteTask: {
+      path: '/tasks',
+      method: 'delete',
     },
   };
   const call = (type, params = {}, customPath = null) => {
@@ -32,7 +47,7 @@ const WebServices = (options = API.SERVER.WEBSERVICES.OPTIONS) => {
         return api.delete(`${path}/${params}`);
       case 'get':
         return api.get(`${path}/${params}`);
-      case 'getAll':
+      case 'getNoParam':
         return api.get(path);
       case 'post':
         return api.post(
